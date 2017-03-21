@@ -13,6 +13,7 @@
 		C4765DA61E811DD3002066BA /* MyWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */; };
 		C4765DA81E811DD3002066BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA71E811DD3002066BA /* Assets.xcassets */; };
 		C4765DAB1E811DD3002066BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */; };
+		C4765DB61E812381002066BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4765DB81E812381002066BA /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,10 @@
 		C4765DA71E811DD3002066BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4765DAA1E811DD3002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4765DAC1E811DD3002066BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4765DB21E812223002066BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C4765DB31E812223002066BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C4765DB71E812381002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4765DBA1E812391002066BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 				C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */,
 				C4765DAC1E811DD3002066BA /* Info.plist */,
 				C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */,
+				C4765DB81E812381002066BA /* Localizable.strings */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C4765D911E811DD3002066BA;
 			productRefGroup = C4765D9B1E811DD3002066BA /* Products */;
@@ -128,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4765DAB1E811DD3002066BA /* LaunchScreen.storyboard in Resources */,
+				C4765DB61E812381002066BA /* Localizable.strings in Resources */,
 				C4765DA81E811DD3002066BA /* Assets.xcassets in Resources */,
 				C4765DA31E811DD3002066BA /* Main.storyboard in Resources */,
 			);
@@ -153,6 +161,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C4765DA21E811DD3002066BA /* Base */,
+				C4765DB21E812223002066BA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -161,8 +170,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C4765DAA1E811DD3002066BA /* Base */,
+				C4765DB31E812223002066BA /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C4765DB81E812381002066BA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4765DB71E812381002066BA /* Base */,
+				C4765DBA1E812391002066BA /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -172,6 +191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -221,6 +241,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
