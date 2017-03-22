@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C4765D9E1E811DD3002066BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765D9D1E811DD3002066BA /* AppDelegate.swift */; };
-		C4765DA01E811DD3002066BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765D9F1E811DD3002066BA /* ViewController.swift */; };
 		C4765DA31E811DD3002066BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA11E811DD3002066BA /* Main.storyboard */; };
 		C4765DA61E811DD3002066BA /* MyWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */; };
 		C4765DA81E811DD3002066BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA71E811DD3002066BA /* Assets.xcassets */; };
 		C4765DAB1E811DD3002066BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */; };
 		C4765DB61E812381002066BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4765DB81E812381002066BA /* Localizable.strings */; };
+		C4765DBD1E8125D7002066BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DBB1E8125D7002066BA /* MainViewController.swift */; };
+		C4765DC21E814982002066BA /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DC11E814982002066BA /* PropertyTableViewController.swift */; };
+		C4765DC51E822066002066BA /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DC41E822066002066BA /* ListTableViewController.swift */; };
+		C4765DC81E822848002066BA /* Listitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DC71E822848002066BA /* Listitem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4765D9A1E811DD3002066BA /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4765D9D1E811DD3002066BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4765D9F1E811DD3002066BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4765DA21E811DD3002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4765DA51E811DD3002066BA /* MyWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyWallet.xcdatamodel; sourceTree = "<group>"; };
 		C4765DA71E811DD3002066BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +31,10 @@
 		C4765DB31E812223002066BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C4765DB71E812381002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4765DBA1E812391002066BA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C4765DBB1E8125D7002066BA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C4765DC11E814982002066BA /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
+		C4765DC41E822066002066BA /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		C4765DC71E822848002066BA /* Listitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listitem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +67,35 @@
 		C4765D9C1E811DD3002066BA /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				C4765DC61E822782002066BA /* Models */,
 				C4765D9D1E811DD3002066BA /* AppDelegate.swift */,
-				C4765D9F1E811DD3002066BA /* ViewController.swift */,
 				C4765DA11E811DD3002066BA /* Main.storyboard */,
 				C4765DA71E811DD3002066BA /* Assets.xcassets */,
 				C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */,
 				C4765DAC1E811DD3002066BA /* Info.plist */,
 				C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */,
 				C4765DB81E812381002066BA /* Localizable.strings */,
+				C4765DC31E815A2A002066BA /* Controllers */,
 			);
 			path = MyWallet;
+			sourceTree = "<group>";
+		};
+		C4765DC31E815A2A002066BA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C4765DBB1E8125D7002066BA /* MainViewController.swift */,
+				C4765DC11E814982002066BA /* PropertyTableViewController.swift */,
+				C4765DC41E822066002066BA /* ListTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C4765DC61E822782002066BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4765DC71E822848002066BA /* Listitem.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4765DC21E814982002066BA /* PropertyTableViewController.swift in Sources */,
 				C4765DA61E811DD3002066BA /* MyWallet.xcdatamodeld in Sources */,
-				C4765DA01E811DD3002066BA /* ViewController.swift in Sources */,
+				C4765DC81E822848002066BA /* Listitem.swift in Sources */,
 				C4765D9E1E811DD3002066BA /* AppDelegate.swift in Sources */,
+				C4765DC51E822066002066BA /* ListTableViewController.swift in Sources */,
+				C4765DBD1E8125D7002066BA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
