@@ -9,10 +9,16 @@
 import UIKit
 
 class PropertyTableViewController: UITableViewController {
+    
+    var tempArr = [
+        ["propertyname":"中国银行", "price":45.6, "isspent":true],
+        ["propertyname":"中国银行", "price":14.0, "isspent":false]
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.estimatedRowHeight = 70
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         
         self.refreshControl = UIRefreshControl()
     }
@@ -26,23 +32,61 @@ class PropertyTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 4
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        var cell:UITableViewCell
+        switch indexPath.row {
+        case 0:
+            cell = tableView.dequeueReusableCell(withIdentifier: "overviewcell", for: indexPath)
+            let label1 = cell.viewWithTag(101) as! UILabel
+            label1.text = "支出： ￥45.6"
+            let label2 = cell.viewWithTag(102) as! UILabel
+            label2.text = "收入： ￥14.0"
+        case 1:
+            cell = tableView.dequeueReusableCell(withIdentifier: "addaccountcell", for: indexPath)
+            let button = cell.viewWithTag(201) as! UIButton
+            button.titleLabel!.text = "添加一个账户"
+        default:
+            cell = tableView.dequeueReusableCell(withIdentifier: "accountcell", for: indexPath)
+            let data = tempArr[indexPath.row-2]
+            let propertynamelabel = cell.viewWithTag(301) as! UILabel
+            let propertycommentname = cell.viewWithTag(302) as! UILabel
+            let pricelabel = cell.viewWithTag(303) as! UILabel
+            propertynamelabel.text = data["propertyname"] as! String
+            if data["isspent"] as! Bool {
+                propertycommentname.text = "支出"
+                pricelabel.textColor = UIColor.red
+            } else {
+                propertycommentname.text = "收入"
+                pricelabel.textColor = UIColor(red: 0, green: 128, blue: 0, alpha: 1)
+            }
+            pricelabel.text = String(data["price"] as! Double)
+        }
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 80
+        case 1:
+            return 44
+        default:
+            return 70
+        }
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.

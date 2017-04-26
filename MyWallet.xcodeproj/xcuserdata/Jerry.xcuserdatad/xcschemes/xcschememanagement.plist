@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WalletWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C42CFCC71E9FBCD400868C25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C4765D991E811DD3002066BA</key>
 		<dict>
 			<key>primary</key>

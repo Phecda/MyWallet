@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UITabBarController {
     
-    var refreshControl: UIRefreshControl!
+    var managedContext: NSManagedObjectContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()
