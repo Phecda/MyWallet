@@ -11,8 +11,10 @@ import UIKit
 class PropertyTableViewController: UITableViewController {
     
     var tempArr = [
-        ["propertyname":"中国银行", "price":45.6, "isspent":true],
-        ["propertyname":"中国银行", "price":14.0, "isspent":false]
+        ["propertyname":"中国银行", "price":12300.05, "comments": "尾号8888"],
+        ["propertyname":"建设银行", "price":5649.9, "comments": "尾号6666"],
+        ["propertyname":"支付宝", "price":14.0, "comments": "szp@163.com"]
+        
     ]
 
     override func viewDidLoad() {
@@ -37,7 +39,7 @@ class PropertyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 5
     }
 
     
@@ -60,14 +62,9 @@ class PropertyTableViewController: UITableViewController {
             let propertynamelabel = cell.viewWithTag(301) as! UILabel
             let propertycommentname = cell.viewWithTag(302) as! UILabel
             let pricelabel = cell.viewWithTag(303) as! UILabel
-            propertynamelabel.text = data["propertyname"] as! String
-            if data["isspent"] as! Bool {
-                propertycommentname.text = "支出"
-                pricelabel.textColor = UIColor.red
-            } else {
-                propertycommentname.text = "收入"
-                pricelabel.textColor = UIColor(red: 0, green: 128, blue: 0, alpha: 1)
-            }
+            propertynamelabel.text = data["propertyname"] as? String
+            propertycommentname.text = data["comments"] as? String
+            
             pricelabel.text = String(data["price"] as! Double)
         }
 

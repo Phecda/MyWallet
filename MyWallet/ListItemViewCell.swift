@@ -15,14 +15,14 @@ class ListItemViewCell: UITableViewCell {
     @IBOutlet weak var propertyNameLabel: UILabel!
 }
 
-extension ListItemViewCell {
-    func configureCell(ForItem item: ListItem) {
-        self.propertyNameLabel.text = item.ofProperty!.name
-        self.commentLabel.text = item.comments
-        self.priceLabel.text = item.price?.currencyOutput()
-        self.priceLabel.textColor = item.isSpend ? UIColor.red : UIColor.green
-    }
-}
+//extension ListItemViewCell {
+//    func configureCell(ForItem item: AccountItem) {
+//        self.propertyNameLabel.text = item.ofProperty!.name
+//        self.commentLabel.text = item.comments
+//        self.priceLabel.text = item.price?.currencyOutput()
+//        self.priceLabel.textColor = item.isSpend ? UIColor.red : UIColor.green
+//    }
+//}
 
 extension NSDecimalNumber {
     func currencyOutput() -> String {

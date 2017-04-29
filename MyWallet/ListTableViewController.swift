@@ -10,10 +10,36 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    var tempdics = [
+        ["name": "购物",
+         "data": [
+                  ["propertyname":"现金", "price":77.0, "isspent":true, "date":"昨天", "tag":"购物"],
+                  ["propertyname":"现金", "price":45.0, "isspent":true, "date":"昨天", "tag":"购物"],
+                  ["propertyname":"中国银行", "price":19.8, "isspent":true, "date":"2017-3-27", "tag":"购物"],
+                  ["propertyname":"支付宝", "price":40.6, "isspent":true, "date":"2017-3-24", "tag":"购物"],
+            ]
+        ],
+        ["name": "饮食",
+         "data": [
+            ["propertyname":"中国银行", "price":22.0, "isspent":true, "date":"昨天", "tag":"饮食"],
+           ]
+        ],
+        ["name": "交通",
+         "data": [
+            ["propertyname":"现金", "price":14.0, "isspent":true, "date":"昨天", "tag":"交通"],
+            ]
+        ],
+        ["name": "还款",
+         "data": [
+            ["propertyname":"支付宝", "price":17.0, "isspent":false, "date":"2017-3-14", "tag":"还款"]
+            ]
+        ]
+    ]
+    
     var tempArr = [
         ["propertyname":"中国银行", "price":45.6, "isspent":true, "date":"昨天", "tag":"购物"],
-        ["propertyname":"中国银行", "price":14.0, "isspent":false, "date":"2017-2-25", "tag":"还款"],
-        ["propertyname":"工商银行", "price":14.0, "isspent":true, "date":"2017-2-24", "tag":"借出"]
+        ["propertyname":"中国银行", "price":14.0, "isspent":false, "date":"2017-3-24", "tag":"还款"],
+        ["propertyname":"工商银行", "price":14.0, "isspent":true, "date":"2017-3-23", "tag":"借出"]
     ]
 
 
@@ -36,32 +62,43 @@ class ListTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return tempdics.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.tempArr.count
+        
+        let dic = tempdics[section]
+        let data = dic["data"] as! [Dictionary<String, Any>]
+        return data.count
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let dic = tempdics[section]
+        return dic["name"] as? String
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "accountitemcell", for: indexPath)
-        let data = self.tempArr[indexPath.row]
+        let dic = tempdics[indexPath.section]
+        let arr = dic["data"] as! [Dictionary<String, Any>]
+        let data = arr[indexPath.row]
         let propertynamelabel = cell.viewWithTag(10) as! UILabel
         let taglabel = cell.viewWithTag(11) as! UILabel
         let pricelabel = cell.viewWithTag(12) as! UILabel
         let datelabel = cell.viewWithTag(13) as! UILabel
 
-        propertynamelabel.text = data["propertyname"] as! String
+        propertynamelabel.text = data["propertyname"] as? String
         if data["isspent"] as! Bool {
             pricelabel.textColor = UIColor.red
         } else {
-            pricelabel.textColor = UIColor(red: 0, green: 142, blue: 0, alpha: 1)
+            pricelabel.textColor = UIColor(red: 17.0/255, green: 129.0/255, blue: 1.0/255, alpha: 1)
         }
         pricelabel.text = String(data["price"] as! Double)
-        taglabel.text = data["tag"] as! String
-        datelabel.text = data["date"] as! String
+        taglabel.text = data["tag"] as? String
+        datelabel.text = data["date"] as? String
 
         return cell
     }

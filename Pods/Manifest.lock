@@ -1,22 +1,7 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
-  - Charts (3.0.1):
-    - Charts/Core (= 3.0.1)
-  - Charts/Core (3.0.1)
+  - Charts (3.0.2):
+    - Charts/Core (= 3.0.2)
+  - Charts/Core (3.0.2)
   - Realm (2.6.2):
     - Realm/Headers (= 2.6.2)
   - Realm/Headers (2.6.2)
@@ -24,16 +9,14 @@ PODS:
     - Realm (= 2.6.2)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
   - Charts
   - RealmSwift
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
+  Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
 
-PODFILE CHECKSUM: ba8002239e68a2e8e498a68ebd5a4c0d6db13f61
+PODFILE CHECKSUM: 7cb0a22e605f84d7de40d957e927df601eebab9d
 
 COCOAPODS: 1.2.0

@@ -6,7 +6,7 @@ target 'MyWallet' do
 
 
   # Pods for MyWallet
-  pod 'AFNetworking', '~> 3.1.0'
+  
   pod 'Charts'
   pod 'RealmSwift'
   

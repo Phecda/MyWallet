@@ -12,19 +12,19 @@
 		C42CFCCD1E9FBCD500868C25 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42CFCCC1E9FBCD500868C25 /* TodayViewController.swift */; };
 		C42CFCD01E9FBCD500868C25 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42CFCCE1E9FBCD500868C25 /* MainInterface.storyboard */; };
 		C42CFCD41E9FBCD500868C25 /* WalletWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C42CFCC81E9FBCD500868C25 /* WalletWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		C42CFCE51EA6C50F00868C25 /* ListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42CFCE11EA6C50F00868C25 /* ListItem+CoreDataClass.swift */; };
-		C42CFCE61EA6C50F00868C25 /* ListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42CFCE21EA6C50F00868C25 /* ListItem+CoreDataProperties.swift */; };
-		C42CFCE71EA6C50F00868C25 /* Property+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42CFCE31EA6C50F00868C25 /* Property+CoreDataClass.swift */; };
-		C42CFCE81EA6C50F00868C25 /* Property+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42CFCE41EA6C50F00868C25 /* Property+CoreDataProperties.swift */; };
+		C4642E5D1EB43E0400111718 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4642E5C1EB43E0400111718 /* GraphViewController.swift */; };
 		C4765D9E1E811DD3002066BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765D9D1E811DD3002066BA /* AppDelegate.swift */; };
 		C4765DA31E811DD3002066BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA11E811DD3002066BA /* Main.storyboard */; };
-		C4765DA61E811DD3002066BA /* MyWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */; };
 		C4765DA81E811DD3002066BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA71E811DD3002066BA /* Assets.xcassets */; };
 		C4765DAB1E811DD3002066BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */; };
 		C4765DB61E812381002066BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4765DB81E812381002066BA /* Localizable.strings */; };
 		C4765DBD1E8125D7002066BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DBB1E8125D7002066BA /* MainViewController.swift */; };
 		C4765DC21E814982002066BA /* PropertyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DC11E814982002066BA /* PropertyTableViewController.swift */; };
 		C4765DC51E822066002066BA /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4765DC41E822066002066BA /* ListTableViewController.swift */; };
+		C4A557361EB075E900FB3EA7 /* AccountItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A557351EB075E900FB3EA7 /* AccountItem.swift */; };
+		C4A557381EB07E7400FB3EA7 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A557371EB07E7400FB3EA7 /* Property.swift */; };
+		C4A5573A1EB083CC00FB3EA7 /* AddNewAItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A557391EB083CC00FB3EA7 /* AddNewAItemController.swift */; };
+		C4A5573C1EB0881E00FB3EA7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5573B1EB0881E00FB3EA7 /* Global.swift */; };
 		C4E5C8EC1E827B99002C31EF /* Money.md in Sources */ = {isa = PBXBuildFile; fileRef = C4E5C8EB1E827B99002C31EF /* Money.md */; };
 		C4E5C8F41E82F867002C31EF /* ListItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5C8F31E82F867002C31EF /* ListItemViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -62,14 +62,10 @@
 		C42CFCCC1E9FBCD500868C25 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C42CFCCF1E9FBCD500868C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C42CFCD11E9FBCD500868C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C42CFCE11EA6C50F00868C25 /* ListItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C42CFCE21EA6C50F00868C25 /* ListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C42CFCE31EA6C50F00868C25 /* Property+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Property+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C42CFCE41EA6C50F00868C25 /* Property+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Property+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4642E5C1EB43E0400111718 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		C4765D9A1E811DD3002066BA /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4765D9D1E811DD3002066BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4765DA21E811DD3002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4765DA51E811DD3002066BA /* MyWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyWallet.xcdatamodel; sourceTree = "<group>"; };
 		C4765DA71E811DD3002066BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4765DAA1E811DD3002066BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4765DAC1E811DD3002066BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +76,10 @@
 		C4765DBB1E8125D7002066BA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C4765DC11E814982002066BA /* PropertyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewController.swift; sourceTree = "<group>"; };
 		C4765DC41E822066002066BA /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		C4A557351EB075E900FB3EA7 /* AccountItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountItem.swift; sourceTree = "<group>"; };
+		C4A557371EB07E7400FB3EA7 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		C4A557391EB083CC00FB3EA7 /* AddNewAItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewAItemController.swift; sourceTree = "<group>"; };
+		C4A5573B1EB0881E00FB3EA7 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C4E5C8EB1E827B99002C31EF /* Money.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Money.md; sourceTree = "<group>"; };
 		C4E5C8ED1E827EF1002C31EF /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; };
 		C4E5C8F31E82F867002C31EF /* ListItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemViewCell.swift; sourceTree = "<group>"; };
@@ -159,14 +159,15 @@
 				C4E5C8F21E82F844002C31EF /* View */,
 				C4E5C8EA1E827B6B002C31EF /* Manual */,
 				C4765DC61E822782002066BA /* Models */,
+				C4765DC31E815A2A002066BA /* View Controllers */,
 				C4765D9D1E811DD3002066BA /* AppDelegate.swift */,
 				C4765DA11E811DD3002066BA /* Main.storyboard */,
 				C4765DA71E811DD3002066BA /* Assets.xcassets */,
 				C4765DA91E811DD3002066BA /* LaunchScreen.storyboard */,
 				C4765DAC1E811DD3002066BA /* Info.plist */,
 				C4765DB81E812381002066BA /* Localizable.strings */,
-				C4765DC31E815A2A002066BA /* View Controllers */,
 				C4E5C8ED1E827EF1002C31EF /* test.playground */,
+				C4A5573B1EB0881E00FB3EA7 /* Global.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -177,6 +178,8 @@
 				C4765DBB1E8125D7002066BA /* MainViewController.swift */,
 				C4765DC11E814982002066BA /* PropertyTableViewController.swift */,
 				C4765DC41E822066002066BA /* ListTableViewController.swift */,
+				C4A557391EB083CC00FB3EA7 /* AddNewAItemController.swift */,
+				C4642E5C1EB43E0400111718 /* GraphViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -184,11 +187,8 @@
 		C4765DC61E822782002066BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C42CFCE11EA6C50F00868C25 /* ListItem+CoreDataClass.swift */,
-				C42CFCE21EA6C50F00868C25 /* ListItem+CoreDataProperties.swift */,
-				C42CFCE31EA6C50F00868C25 /* Property+CoreDataClass.swift */,
-				C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */,
-				C42CFCE41EA6C50F00868C25 /* Property+CoreDataProperties.swift */,
+				C4A557351EB075E900FB3EA7 /* AccountItem.swift */,
+				C4A557371EB07E7400FB3EA7 /* Property.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -377,15 +377,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4E5C8EC1E827B99002C31EF /* Money.md in Sources */,
+				C4A557361EB075E900FB3EA7 /* AccountItem.swift in Sources */,
 				C4E5C8F41E82F867002C31EF /* ListItemViewCell.swift in Sources */,
-				C42CFCE81EA6C50F00868C25 /* Property+CoreDataProperties.swift in Sources */,
 				C4765DC21E814982002066BA /* PropertyTableViewController.swift in Sources */,
-				C4765DA61E811DD3002066BA /* MyWallet.xcdatamodeld in Sources */,
-				C42CFCE71EA6C50F00868C25 /* Property+CoreDataClass.swift in Sources */,
 				C4765D9E1E811DD3002066BA /* AppDelegate.swift in Sources */,
 				C4765DC51E822066002066BA /* ListTableViewController.swift in Sources */,
-				C42CFCE61EA6C50F00868C25 /* ListItem+CoreDataProperties.swift in Sources */,
-				C42CFCE51EA6C50F00868C25 /* ListItem+CoreDataClass.swift in Sources */,
+				C4A557381EB07E7400FB3EA7 /* Property.swift in Sources */,
+				C4A5573A1EB083CC00FB3EA7 /* AddNewAItemController.swift in Sources */,
+				C4642E5D1EB43E0400111718 /* GraphViewController.swift in Sources */,
+				C4A5573C1EB0881E00FB3EA7 /* Global.swift in Sources */,
 				C4765DBD1E8125D7002066BA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,19 +627,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C4765DA41E811DD3002066BA /* MyWallet.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C4765DA51E811DD3002066BA /* MyWallet.xcdatamodel */,
-			);
-			currentVersion = C4765DA51E811DD3002066BA /* MyWallet.xcdatamodel */;
-			path = MyWallet.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C4765D921E811DD3002066BA /* Project object */;
 }
