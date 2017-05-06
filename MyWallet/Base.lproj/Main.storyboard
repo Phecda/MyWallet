@@ -37,7 +37,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqQ-RV-Ws6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="1035"/>
+            <point key="canvasLocation" x="636" y="2268"/>
         </scene>
         <!--资产概览-->
         <scene sceneID="tLb-4m-1UD">
@@ -312,6 +312,7 @@
                     <connections>
                         <segue destination="vbz-Ye-ETv" kind="relationship" relationship="viewControllers" id="bCv-DI-riq"/>
                         <segue destination="nX6-6z-UEL" kind="relationship" relationship="viewControllers" id="TqQ-KS-3mP"/>
+                        <segue destination="sdZ-IT-Nyt" kind="relationship" relationship="viewControllers" id="nL6-qG-MOE"/>
                         <segue destination="1jE-wk-gAX" kind="relationship" relationship="viewControllers" id="EDv-BA-tjE"/>
                     </connections>
                 </tabBarController>
@@ -416,11 +417,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="查询" id="S87-ua-8zb">
-                        <barButtonItem key="leftBarButtonItem" title="图表" id="RG8-O5-cSq">
-                            <connections>
-                                <segue destination="1wU-R6-nBp" kind="show" id="mHe-e6-M3T"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="编辑" id="RG8-O5-cSq"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="d6d-2Q-LgO"/>
                     </navigationItem>
                 </tableViewController>
@@ -428,7 +425,7 @@
             </objects>
             <point key="canvasLocation" x="1571.25" y="201.7605633802817"/>
         </scene>
-        <!--Graph View Controller-->
+        <!--统计-->
         <scene sceneID="RFT-AS-lFz">
             <objects>
                 <viewController id="plT-qW-dKg" customClass="GraphViewController" customModule="MyWallet" customModuleProvider="target" sceneMemberID="viewController">
@@ -440,31 +437,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-NI-iUw" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="64" width="320" height="309"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-NI-iUw" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="196" width="320" height="328"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydj-IE-vqr">
-                                <rect key="frame" x="0.0" y="413" width="320" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y1I-r0-1L7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="132"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="MTJ-e9-uaF"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TYB-wH-gzC" detailTextLabel="T29-sa-2pv" style="IBUITableViewCellStyleValue1" id="XvQ-W3-GzO">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XvQ-W3-GzO" id="sjE-IG-AlD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TYB-wH-gzC">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T29-sa-2pv">
+                                                    <rect key="frame" x="261" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="plT-qW-dKg" id="Tpo-fe-frd"/>
+                                    <outlet property="delegate" destination="plT-qW-dKg" id="PEy-KU-3sg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y1I-r0-1L7" firstAttribute="leading" secondItem="6Hu-ms-z2v" secondAttribute="leadingMargin" constant="-16" id="2A3-1S-rAs"/>
+                            <constraint firstItem="Qgl-oM-uel" firstAttribute="top" secondItem="bv7-NI-iUw" secondAttribute="bottom" id="9oA-PG-CKn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y1I-r0-1L7" secondAttribute="trailing" constant="-16" id="QGg-be-IbE"/>
+                            <constraint firstItem="y1I-r0-1L7" firstAttribute="top" secondItem="uC6-KM-wc6" secondAttribute="bottom" id="X5M-Kg-F6L"/>
+                            <constraint firstItem="bv7-NI-iUw" firstAttribute="leading" secondItem="6Hu-ms-z2v" secondAttribute="leadingMargin" constant="-16" id="d0D-KN-gaR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bv7-NI-iUw" secondAttribute="trailing" constant="-16" id="jwh-LK-eAY"/>
+                            <constraint firstItem="bv7-NI-iUw" firstAttribute="top" secondItem="y1I-r0-1L7" secondAttribute="bottom" id="nR7-kF-UIn"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="sqk-W6-nXQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Pgw-yr-4pw"/>
+                    <navigationItem key="navigationItem" title="统计" id="sqk-W6-nXQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Pgw-yr-4pw"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pieChartView" destination="bv7-NI-iUw" id="OPn-UQ-l7S"/>
+                        <outlet property="tableView" destination="y1I-r0-1L7" id="hni-PM-Eqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOX-V2-GU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592.5" y="201.7605633802817"/>
+            <point key="canvasLocation" x="1633.125" y="959.15492957746483"/>
         </scene>
         <!--用户-->
         <scene sceneID="raH-b5-zf7">
@@ -483,7 +522,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzc-Lu-od5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="1035"/>
+            <point key="canvasLocation" x="-319" y="1391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n5g-Ed-hBG">
@@ -503,23 +542,24 @@
             </objects>
             <point key="canvasLocation" x="2490" y="-716.19718309859161"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cAm-dH-oXo">
+        <!--统计-->
+        <scene sceneID="GMW-o9-YCc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wU-R6-nBp" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sdZ-IT-Nyt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="统计" id="rgb-2v-Y3h"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AJF-5G-CNn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZT-Cb-Il1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="plT-qW-dKg" kind="relationship" relationship="rootViewController" id="pN7-GI-CIX"/>
+                        <segue destination="plT-qW-dKg" kind="relationship" relationship="rootViewController" id="K4m-vX-vQa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAI-8E-nRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVr-qK-NPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2595" y="201.7605633802817"/>
+            <point key="canvasLocation" x="635.625" y="959.15492957746483"/>
         </scene>
     </scenes>
 </document>

@@ -36,6 +36,29 @@ class ListTableViewController: UITableViewController {
         ]
     ]
     
+//    var tempdics = [
+//        ["name": "中国银行",
+//         "data": [
+//            ["propertyname":"中国银行", "price":22.0, "isspent":true, "date":"昨天", "tag":"饮食"],
+//            ["propertyname":"中国银行", "price":19.8, "isspent":true, "date":"2017-3-27", "tag":"购物"],
+//            ]
+//        ],
+//        ["name": "现金",
+//         "data": [
+//            ["propertyname":"现金", "price":77.0, "isspent":true, "date":"昨天", "tag":"购物"],
+//            ["propertyname":"现金", "price":45.0, "isspent":true, "date":"昨天", "tag":"购物"],
+//            ["propertyname":"现金", "price":14.0, "isspent":true, "date":"昨天", "tag":"交通"],
+//            ]
+//        ],
+//        ["name": "支付宝",
+//         "data": [
+//            
+//            ["propertyname":"支付宝", "price":40.6, "isspent":true, "date":"2017-3-24", "tag":"购物"],
+//            ["propertyname":"支付宝", "price":17.0, "isspent":false, "date":"2017-3-14", "tag":"还款"]
+//            ]
+//        ]
+//    ]
+    
     var tempArr = [
         ["propertyname":"中国银行", "price":45.6, "isspent":true, "date":"昨天", "tag":"购物"],
         ["propertyname":"中国银行", "price":14.0, "isspent":false, "date":"2017-3-24", "tag":"还款"],

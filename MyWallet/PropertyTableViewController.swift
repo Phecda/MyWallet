@@ -13,6 +13,7 @@ class PropertyTableViewController: UITableViewController {
     var tempArr = [
         ["propertyname":"中国银行", "price":12300.05, "comments": "尾号8888"],
         ["propertyname":"建设银行", "price":5649.9, "comments": "尾号6666"],
+        ["propertyname":"现金", "price": 105.0, "comments": ""],
         ["propertyname":"支付宝", "price":14.0, "comments": "szp@163.com"]
         
     ]
@@ -39,7 +40,7 @@ class PropertyTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 2+self.tempArr.count
     }
 
     
@@ -49,9 +50,9 @@ class PropertyTableViewController: UITableViewController {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: "overviewcell", for: indexPath)
             let label1 = cell.viewWithTag(101) as! UILabel
-            label1.text = "支出： ￥45.6"
+            label1.text = "本月支出： ￥327.6"
             let label2 = cell.viewWithTag(102) as! UILabel
-            label2.text = "收入： ￥14.0"
+            label2.text = "本月收入： ￥14.0"
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "addaccountcell", for: indexPath)
             let button = cell.viewWithTag(201) as! UIButton
